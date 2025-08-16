@@ -21,3 +21,8 @@ Cross Dependency: Multiple classes are responsible for logging, and Billing dire
 Open/Closed Principle: Adding new billing strategies or changing tax logic means editing multiple classes.
 
 Maintainability: Hard to test or extend the product calculation or billing separately; logging is scattered.
+
+
+To see the applied design pattern
+go-to branch
+design-pattern-creational -> design-pattern-structural-behavioral
