@@ -1,7 +1,7 @@
 package kfru.architecture;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import kfru.architecture.product.Product;
+
 public class Main {
     public static void main(String[] args) {
         Shop shop = new Shop();
