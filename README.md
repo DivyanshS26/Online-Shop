@@ -25,4 +25,4 @@ Logger
 
 **To see the applied design pattern
 go-to branch
-[design-pattern-creational](https://github.com/DivyanshS26/Online-Shop/tree/design-pattern-creational) -> design-pattern-structural-behavioral**
+[design-pattern-creational](https://github.com/DivyanshS26/Online-Shop/tree/design-pattern-creational) -> [design-pattern-structural-behavioral](https://github.com/DivyanshS26/Online-Shop/tree/design-pattern-structural-behavioral)**
