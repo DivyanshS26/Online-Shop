@@ -1,24 +1,47 @@
 # Online-Shop
 
-Till now we have used Creational Design Pattern and partial Structural Design Pattern
+Added Structural and Behavior Design Patterns
 
-**Step 1**: Design Patterns Selection
+**Step 1**: Implemented Decorator Pattern (Structural)
+1. Refactored Product class hierarchy to support decorators.
 
-1. Factory Method to decouple product creation from Shop.
+2. Created an abstract ProductDecorator class that wraps a Product.
 
-2. Strategy Pattern to separate tax/bill calculation logic.
+3. Added concrete decorators: GiftWrapDecorator (adds gift wrap cost) and DiscountDecorator (applies discount).
 
-3. Centralized Logger to remove logging cross-dependency.
+4. Modified Shop to decorate products dynamically based on purchase options (gift wrap, discount).
 
+**Step 2**: Implemented Adapter Pattern (Structural)
+1. Introduced a hypothetical external billing system with a different interface (GovtBillingSystem).
 
-**Step 2**: Refactoring the code
+2. Created BillingAdapter class extending Billing that adapts calls to the external billing system.
 
-**Step 3**: How Design Patterns Improved the Code
-Reduced Coupling: 
-1. Shop, Product, Billing, and Logger are loosely coupled. Each fulfills a distinct role.
+3. Allowed Shop to use either internal billing or external billing transparently.
 
-2. Single Responsibility Principle: Logging, product creation, and billing are each handled by their own class.
+**Step 3**: Implemented Observer Pattern (Behavioral)
+1. Defined Observer interface and Subject class to manage observers.
 
-3. Open/Closed Principle: Easily add new products, tax strategies, or change logic without modifying existing classes.
+2. Made Shop extend Subject to notify observers of checkout events.
 
-4. Maintainability and Testability: Each class can be tested in isolation; changes are less likely to impact unrelated parts.
+3. Created concrete observers:
+
+4. InventoryObserver (to update stock)
+
+5. AnalyticsObserver (to track sales)
+
+6. Registered observers in the Shop.
+
+7. Observers receive updates after each checkout.
+
+**Step 4**: Implemented Command Pattern (Behavioral)
+Defined Command interface with execute() method.
+
+1. Created concrete commands:
+
+2. PurchaseCommand to encapsulate buying a product.
+
+3. CheckoutCommand to encapsulate the checkout process.
+
+4. Created CommandInvoker to execute commands and maintain a history.
+
+5. Modified business logic flows in Main to use command objects for buying and checking out products.
